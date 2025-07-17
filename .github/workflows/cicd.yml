@@ -31,9 +31,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: gdlint and gdformat
+      - name: gdlint and gdformat install
         uses: Scony/godot-gdscript-toolkit@master
+       
+      - name: Run gdformat cheks
         run: gdformat --check src/
+      
+      - name: Run gdlint checks
         run: gdlint src/
  
       - name: unit tests with godot gut
