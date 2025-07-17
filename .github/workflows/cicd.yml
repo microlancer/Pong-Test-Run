@@ -31,6 +31,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: gdlint and gdformat
+        uses: Scony/godot-gdscript-toolkit@master
+        run: gdformat --check src/
+        run: gdlint src/
+ 
       - name: unit tests with godot gut
         if: ${{ !env.is_release }}
         uses: 100-Devs-1-Game/godot-gut-ci@fix/import-gut
