@@ -35,7 +35,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventBus="*res://global/event_bus.gd"
+FmodManager="*res://addons/fmod/FmodManager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/fmod/plugin.cfg", "res://addons/gut/plugin.cfg")
