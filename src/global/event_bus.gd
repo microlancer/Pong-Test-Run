@@ -1,3 +1,4 @@
+extends Node
 # autoload EventBus
 
 # the place for all global signals
